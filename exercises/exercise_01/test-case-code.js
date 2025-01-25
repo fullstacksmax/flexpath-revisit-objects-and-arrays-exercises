@@ -1,4 +1,20 @@
 // When ready, use the code below for testing
+const person = {
+  firstName: "John",
+  lastName: "Doe"
+}
+
+Object.defineProperty(person, "getFullName", {
+  value: function () {
+  return `${this.firstName} ${this.lastName}`;
+  },
+  writable: false,
+  enumerable: false,
+  configurable: false,
+
+});
+
+
 console.log(person.getFullName()); // Outputs: John Doe
 
 // Verifying property attributes
